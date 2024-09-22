@@ -16,3 +16,6 @@ my_modpack.zip/
 ```
 
 The overrides folder is optional and allows including files in the zip.
+
+## pack.json Structure
+See the lastest revison in [spec/](https://github.com/CRModders/CRM-2/tree/main/spec)
