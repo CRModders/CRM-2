@@ -9,18 +9,18 @@
         {
             "name": "NAME (optional maybe)",
             "id": "MOD_ID",
-            "url": "CUSTOM_HTTP_URL", (optional)
-			"sha512_hash": " hash of the file, (Required if download_url is present.)",
+            "url": "CUSTOM_HTTP_URL  (optional)",
+	    "sha512_hash": " hash of the file, (Required if download_url is present.)",
             "version": "1.1.0 (optional, no *)",
-			"mod_type": "Put mod loader, eg quilt, data, puzzle",
-        },
+	    "mod_type": "Put mod loader, eg quilt, data, puzzle"
+},
         {
             "name": "ANOTHER MOD",
             "id": "MOD_2",
             "url": "/MOD_2/version/0.1.1/file.jar",
-			"sha512_hash": "the hash",
+	    "sha512_hash": "the hash",
             "version": "8.23.4",
-			"mod_type": "quilt",
+	    "mod_type": "quilt"
         }
     ]
 }
