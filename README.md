@@ -21,4 +21,4 @@ The overrides folder is optional and allows including files in the zip.
 See the lastest revison in [spec/](https://github.com/CRModders/CRM-2/tree/main/spec)
 
 ## Example
-A modpack using all of CRM-2 is here: https://www.crmm.tech/modpack/cosmic-fixes/version/LCY8rNJkP-3BYZVZ3Q
+A modpack using all of CRM-2 is here: https://crmm-cdn.global.ssl.fastly.net/cdn/data/cosmic-fixes/version/1.0.1/cosmic-fixes-1.0.1-crm-2.zip
