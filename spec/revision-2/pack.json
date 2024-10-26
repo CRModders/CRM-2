@@ -1,0 +1,25 @@
+{
+	"spec_revision": 2,
+	"name": "The Awesome Modpack",
+	"version": "0.1.4-beta",
+	"description": "This is just a modpack :)",
+	"loader": "cosmic-quilt",
+	"base_url": "https://api.crmm.tech/api/cdn/data",
+	"files": [
+		{
+			"type": "mod",
+			"id": "simply-cosmic-shading",
+			"version": "0.1.6+cr0.3.0",
+			"sha512_hash": "bc7c4572f4acc893a575667fd4385f139142f4861bacee4f64f4672a2f3ace7d554fce86fd5055b52c9c530be370f6c5d80ec4ac740599701ecace716566ae2b",
+			"env": {
+				"client": "required",
+				"server": "required"
+			},
+			"download_url": "/simply-cosmic-shading/version/0.1.6+cr0.3.0/simply-cosmic-shading-0.1.6-cr0.3.0.jar?isCdnReq=false"
+		}
+	],
+	"dependencies": {
+		"cosmic-reach": "0.3.1",
+		"cosmic-quilt": "2.3.0"
+	}
+}
