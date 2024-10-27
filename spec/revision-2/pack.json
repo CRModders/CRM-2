@@ -1,5 +1,4 @@
 {
-	"$schema": "./schema.json",
 	"spec_revision": 2,
 	"name": "The Awesome Modpack",
 	"version": "0.1.4-beta",
