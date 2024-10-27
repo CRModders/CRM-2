@@ -1,6 +1,7 @@
 ```
 modpack.zip/
     pack.json
+
     overrides/
         options.txt
         config/
@@ -8,12 +9,24 @@ modpack.zip/
         mods/
             embedded-mod.jar
 
+    client-overrides/
+        client-options.txt
+        config/
+            mod.config
+        mods/
+            embedded-client-mod.jar
     server-overrides/
         server-options.txt
         config/
             world-gen.config
         mods/
-            embedded-mod.jar
+            embedded-server-mod.jar
 ```
-You define your modpack metadata in the `pack.json`. Optionally, you can override some config and stuff using the `overrides` and `server-overrides` folders.
-If there is no `server-overrides` folder, the `overrides` folder will be used for both the client and the server.
+
+You define your modpack metadata in the `pack.json`. \
+Optionally you can override config and stuff too. For that you can include either:
+- a `overrides` folder inside the zip. The contents of the overrides folder will be copied to the respective in game folders. \
+    NOTE: It applies to both the client and the server.
+
+- a `client-overrides` AND/OR a `server-overrides` folder \
+    As the name suggests, `client-overrides` folder is used for client side overrides and `server-overrides` is used for server side.
