@@ -1,4 +1,5 @@
 {
+	"$schema": "https://www.crmodders.dev/crm-2/revision-2/schema.json",
 	"spec_revision": 2,
 	"name": "The Awesome Modpack",
 	"version": "0.1.4-beta",
