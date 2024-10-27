@@ -23,7 +23,7 @@
 		},
 		"icon": {
 			"type": "string",
-			"description": "The URL of the modpack's icon (Optional)"
+			"description": "The URL of the modpack's icon. Can be either a http URL or a path to image file relative to the root of modpack's zip (Optional)"
 		},
 		"base_url": {
 			"type": "string",
@@ -65,7 +65,8 @@
 				},
 				"sha512_hash": {
 					"type": "string",
-					"description": "The sha512 hash of the file"
+					"description": "The sha512 hash of the file",
+					"pattern": "^[a-f0-9]{128}$"
 				},
 				"env": {
 					"$ref": "#/definitions/EnvContent"

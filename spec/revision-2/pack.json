@@ -1,4 +1,5 @@
 {
+	"$schema": "./schema.json",
 	"spec_revision": 2,
 	"name": "The Awesome Modpack",
 	"version": "0.1.4-beta",
@@ -16,6 +17,17 @@
 				"server": "required"
 			},
 			"download_url": "/simply-cosmic-shading/version/0.1.6+cr0.3.0/simply-cosmic-shading-0.1.6-cr0.3.0.jar?isCdnReq=false"
+		},
+		{
+			"type": "datamod",
+			"id": "a-texture-pack",
+			"version": "0.1.1",
+			"sha512_hash": "266a2309edb7e07fa0baf0f89bcffdb2d56ed7fb8493970a7596056413bf72d9ca55ad68c6cc9216a13af9d355f43bb11b42cccc22cea1bacc74129af19d35c0",
+			"env": {
+				"client": "required",
+				"server": "optional"
+			},
+			"download_url": "https://example.com/a-texture-pack/0.1.1.zip"
 		}
 	],
 	"dependencies": {
