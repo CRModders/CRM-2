@@ -1,0 +1,37 @@
+{
+	"$schema": "https://www.crmodders.dev/crm-2/revision-2/schema.json",
+	"spec_revision": 2,
+	"name": "The Awesome Modpack",
+	"version": "0.1.4-beta",
+	"description": "This is just a modpack :)",
+	"loader": "cosmic-quilt",
+	"base_url": "https://api.crmm.tech/api/cdn/data",
+	"files": [
+		{
+			"type": "mod",
+			"id": "simply-cosmic-shading",
+			"version": "0.1.6+cr0.3.0",
+			"sha512_hash": "bc7c4572f4acc893a575667fd4385f139142f4861bacee4f64f4672a2f3ace7d554fce86fd5055b52c9c530be370f6c5d80ec4ac740599701ecace716566ae2b",
+			"env": {
+				"client": "required",
+				"server": "required"
+			},
+			"download_url": "/simply-cosmic-shading/version/0.1.6+cr0.3.0/simply-cosmic-shading-0.1.6-cr0.3.0.jar?isCdnReq=false"
+		},
+		{
+			"type": "datamod",
+			"id": "a-texture-pack",
+			"version": "0.1.1",
+			"sha512_hash": "266a2309edb7e07fa0baf0f89bcffdb2d56ed7fb8493970a7596056413bf72d9ca55ad68c6cc9216a13af9d355f43bb11b42cccc22cea1bacc74129af19d35c0",
+			"env": {
+				"client": "required",
+				"server": "optional"
+			},
+			"download_url": "https://example.com/a-texture-pack/0.1.1.zip"
+		}
+	],
+	"dependencies": {
+		"cosmic-reach": "pre-alpha-0.3.1",
+		"cosmic-quilt": "2.3.0"
+	}
+}

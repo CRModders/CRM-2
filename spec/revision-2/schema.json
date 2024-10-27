@@ -1,0 +1,110 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Cosmic Reach Modpack Schema",
+	"description": "Schema for a cosmic reach modpack file",
+	"type": "object",
+	"required": ["spec_revision", "name", "loader", "version", "files"],
+	"properties": {
+		"spec_revision": {
+			"type": "number",
+			"description": "The revision of the spec your modpack is using"
+		},
+		"name": {
+			"type": "string",
+			"description": "The name of your modpack"
+		},
+		"version": {
+			"type": "string",
+			"description": "The version identifier of the modpack"
+		},
+		"description": {
+			"type": "string",
+			"description": "The description of the modpack (Optional)"
+		},
+		"icon": {
+			"type": "string",
+			"description": "The URL of the modpack's icon. Can be either a http URL or a path to image file relative to the root of modpack's zip (Optional)"
+		},
+		"base_url": {
+			"type": "string",
+			"description": "The base url for the modpack file downloads (Optional, Required when using relative urls)"
+		},
+		"loader": {
+			"type": "string",
+			"enum": ["vanilla", "cosmic-quilt", "puzzle"],
+			"description": "The name of the mod loader"
+		},
+		"files": {
+			"type": "array",
+			"description": "List of files to download",
+			"items": {
+				"$ref": "#/definitions/FileContent"
+			}
+		},
+		"dependencies": {
+			"type": "object",
+			"description": "The dependencies of the modpack"
+		}
+	},
+	"definitions": {
+		"FileContent": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"$ref": "#/definitions/ModTypeContent"
+				},
+				"id": {
+					"type": "string",
+					"description": "The identifier of the mod (FilePath safe)",
+					"pattern": "^[a-zA-Z0-9-_.+]+$"
+				},
+				"version": {
+					"type": "string",
+					"description": "The version of the mod (FilePath safe)",
+					"pattern": "^[a-zA-Z0-9-_.+]+$"
+				},
+				"sha512_hash": {
+					"type": "string",
+					"description": "The sha512 hash of the file",
+					"pattern": "^[a-f0-9]{128}$"
+				},
+				"env": {
+					"$ref": "#/definitions/EnvContent"
+				},
+				"download_url": {
+					"type": "string",
+					"description": "The download url of the file"
+				}
+			},
+			"required": [
+				"type",
+				"id",
+				"version",
+				"sha512_hash",
+				"env",
+				"download_url"
+			]
+		},
+		"EnvContent": {
+			"type": "object",
+			"properties": {
+				"client": {
+					"type": "string",
+					"enum": ["required", "optional"],
+					"description": "Whether the mod is required on client side or not"
+				},
+				"server": {
+					"type": "string",
+					"enum": ["required", "optional"],
+					"description": "Whether the mod is required on server side or not"
+				}
+			},
+			"required": ["server", "client"]
+		},
+		"ModTypeContent": {
+			"type": "string",
+			"enum": ["mod", "datamod"],
+			"description": "The type of the mod"
+		}
+	}
+}
